@@ -1,0 +1,129 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  background-color: #555555;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header img {
+  width: 200px;
+  margin: 1.5rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+main ul {
+  margin: 0;
+  padding: 0;
+}
+main li {
+  padding: 0.25rem;
+  list-style: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+main li .card-info {
+  height: 4rem;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+main li img {
+  width: 31px;
+}
+main li:hover {
+  transition: background 0.3s;
+  background-color: #ddd;
+}
+main .button-group {
+  width: 320px;
+  display: flex;
+  justify-content: space-around;
+}
+main .button-group button {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #555555;
+}
+main .button-group button:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+main .instructions-container {
+  display: flex;
+  gap: 8px;
+}
+main .instructions-container h3 {
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+footer p {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.5rem;
+}
+
+.background {
+  display: none;
+  position: absolute;
+  margin-top: -999px;
+  margin-right: -999px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000080;
+}
+
+.background.active {
+  display: flex;
+  margin: 0;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.background img {
+  width: 70%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background: #fff;
+}
+
+.background div {
+  text-align: center;
+  padding: 0.5rem;
+  background: #fff;
+}/*# sourceMappingURL=global.css.map */

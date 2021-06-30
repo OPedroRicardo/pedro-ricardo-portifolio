@@ -1,0 +1,157 @@
+* {
+  color: #333;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+}
+
+nav {
+  padding: 8rem;
+}
+nav a {
+  margin: 0 1rem;
+}
+nav .navbar-brand {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 0%;
+  letter-spacing: -0.025em;
+  padding: 0 1.5rem;
+}
+nav .nav-item {
+  font-family: "JetBrains Mono", monospace;
+}
+
+main {
+  padding: 0 8rem;
+  background: #E3FBF8;
+}
+main #projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 0 4rem;
+}
+main img {
+  margin: 4rem 0;
+}
+main p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+main strong {
+  color: #ab3f11;
+}
+main a {
+  color: #ab3f11;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+main a:hover {
+  color: #00ab94;
+}
+main .introduction {
+  justify-content: space-around;
+}
+main .introduction img {
+  margin-right: 2rem;
+  width: 40%;
+}
+main .card-group {
+  justify-content: center;
+  margin: 3rem 0;
+  gap: 2rem;
+}
+main .card-group .card-right-column {
+  margin: 2rem 0 0 0;
+}
+main .project-card {
+  max-width: 416px;
+  width: 100%;
+  height: 467px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #fcc1a9;
+  border: 2px solid #f76b31;
+}
+main .project-card img {
+  margin: 1rem 0;
+}
+main .project-card p {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1rem 3rem;
+}
+main .project-card .button-group {
+  width: 100%;
+  display: flex;
+}
+main .project-card .button-group .btn-light {
+  color: #333;
+}
+main .project-card a {
+  height: 64px;
+  width: 100%;
+  border-radius: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #fff;
+}
+main .project-card a:hover {
+  transition: 0.3s;
+  opacity: 90%;
+}
+main .project-card .button-dark {
+  color: #fdfdfd;
+  background: #333;
+  height: 64px;
+}
+main button {
+  width: 10rem;
+  align-self: center;
+  font-family: "JetBrains Mono", monospace;
+}
+main #studying {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 4rem;
+}
+main #studying h2 {
+  text-align: center;
+}
+@media (max-width: 900px) {
+  main .introduction {
+    flex-direction: column;
+  }
+  main .introduction img {
+    width: 100%;
+  }
+}
+
+footer a:hover {
+  transition: 0.3s;
+  opacity: 80%;
+}/*# sourceMappingURL=styles.css.map */
