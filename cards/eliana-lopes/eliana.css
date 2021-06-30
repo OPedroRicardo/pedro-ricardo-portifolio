@@ -33,7 +33,8 @@ footer {
 }
 @media (max-width: 570px) {
   footer {
-    height: 30%;
+    height: 10%;
     background-image: url("./src/waves-sm.svg");
+    background-size: 200%;
   }
 }/*# sourceMappingURL=eliana.css.map */
