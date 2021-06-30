@@ -2,7 +2,7 @@ const shareButton = document.querySelector('#share-btn')
 const qrButton = document.querySelector('#qr-btn')
 const qrContainer = document.querySelector('.background')
 const shareData = {
-    title: 'Eliana Z. Lopes - Cartão',
+    title: 'Eliana Z. Lopes - Cartão Virtual',
     text: 'Veja as informações de contato de Eliana Z. Lopes.',
     url: 'https://pedro-ricardo-portifolio.vercel.app/cards/eliana-lopes/eliana-card.html',
 }

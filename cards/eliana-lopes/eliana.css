@@ -33,6 +33,7 @@ footer {
 }
 @media (max-width: 570px) {
   footer {
+    height: 10%;
     background: #540B0B;
   }
 }/*# sourceMappingURL=eliana.css.map */
