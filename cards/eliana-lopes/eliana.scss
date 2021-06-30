@@ -37,11 +37,12 @@ footer {
 @media( max-width: 900px ) {
     footer {
         height: 30%;
-        background-image: url('./src/waves-md.svg')
+        background-image: url('./src/waves-md.svg');
     }
 }
 
 @media( max-width: 570px ) {
     footer {
         background: #540B0B;
+    }
 }
