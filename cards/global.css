@@ -85,6 +85,13 @@ main .instructions-container h3 {
   opacity: 0.75;
 }
 
+footer {
+  width: 100%;
+  height: 10%;
+  color: #fdfdfd;
+  bottom: 0;
+  position: absolute;
+}
 footer a {
   font-size: 0.5rem;
   text-decoration: none;
