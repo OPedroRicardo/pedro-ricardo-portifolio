@@ -34,7 +34,7 @@ export default function Dialog({ setShow, type }) {
 
   return (
     <div onClick={() => setShow(false)} className={`${jetbrains.className} ${Styles.mainContainer}`}>
-      <main>
+      <main className={Styles.dialog}>
         <p className={Styles.btnRight} onClick={() => setShow(false)}>[x]</p>
         <h1>{ typeRel[type].title }</h1>
         { typeRel[type].message && <p>{ typeRel[type].message }</p> }

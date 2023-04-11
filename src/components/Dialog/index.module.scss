@@ -5,21 +5,13 @@
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
+  padding: 1rem;
   top: 0;
   left: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  main {
-    background: var(--color-0);
-    padding: 0 3rem;
-    width: 40vw;
-    min-width: 600px;
-    height: 80vh;
-    border-radius: 30px;
-  }
 
   h1 {
     color: var(--color-1);
@@ -57,3 +49,11 @@
   }
 }
 
+.dialog {
+  background: var(--color-0);
+  padding: 0 3rem;
+  max-width: 80vw;
+  width: 600px;
+  height: 80vh;
+  border-radius: 30px;
+}
