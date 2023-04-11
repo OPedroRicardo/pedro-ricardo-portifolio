@@ -56,7 +56,7 @@ export default function Home() {
   }
 
   const title = "Pedro Ricardo's Portfolio"
-  const description = "I’m a 18-years-old Full Stack Developer that loves to learn and to teach."
+  const description = "I’m an 18-years-old Full Stack Developer that loves to learn and teach"
 
   return (
     <>
@@ -85,7 +85,7 @@ export default function Home() {
           <div>
             <h1>HEY, I AM</h1>
             <h2>PEDRO RICARDO</h2>
-            <p>I’m a 18-years-old <strong>Full Stack</strong> Developer that loves to <strong>learn</strong> and to <strong>teach</strong>.</p>
+            <p>I’m an 18-years-old <strong>Full Stack</strong> Developer that loves to <strong>learn</strong> and <strong>teach</strong>.</p>
           </div>
           <footer>
             <div className={styles.skills}>
