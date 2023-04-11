@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { useState, useEffect } from 'react'
 import styles from '@/styles/Home.module.scss'
 import { Dialog } from '../components'
+import aos from 'aos';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,7 +35,10 @@ export default function Home() {
   const [currType, setCurrType] = useState('front')
   const [showDialog, setShowDialog] = useState(false)
 
-  
+  useEffect(() => {
+    aos.init()
+  }, []);
+
   useEffect(() => {
     themesRel[theme].forEach(([k, v]) => {
       document.documentElement.style.setProperty(k, v);
@@ -75,12 +79,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link rel="icon" href="/Logo.svg" />
-
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
       </Head>
       <main className={`${styles.mainContainer} ${inter.className}`}>
         <div data-aos="fade-right" className={styles.mainContent}>
