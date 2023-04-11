@@ -3,7 +3,8 @@ import { Inter } from 'next/font/google'
 import { useState, useEffect } from 'react'
 import styles from '@/styles/Home.module.scss'
 import { Dialog } from '../components'
-import aos from 'aos';
+import aos from 'aos'
+import 'aos/dist/aos.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

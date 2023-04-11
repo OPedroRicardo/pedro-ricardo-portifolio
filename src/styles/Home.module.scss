@@ -83,7 +83,8 @@
 
     h2 {
       font-size: 50px;
-      line-height: 200.5%;
+      padding-top: 2rem;
+      line-height: 100.5%;
     }
 
     p {
@@ -158,9 +159,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 32px;
-  gap: 40px;
+  gap: 56px;
 
   width: 40%;
+  min-width: fit-content;
   left: 32px;
   top: 900px;
 
