@@ -2,7 +2,8 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import { useState, useEffect } from 'react'
 import styles from '@/styles/Home.module.scss'
-import { Dialog } from '../components'
+import { Dialog } from '@/components'
+import { handleThreejsBg } from '@/services'
 import aos from 'aos'
 import 'aos/dist/aos.css'
 
@@ -32,12 +33,17 @@ export default function Home() {
     ]
   ]
 
-  const [theme, setTheme] = useState(0)
-  const [currType, setCurrType] = useState('front')
-  const [showDialog, setShowDialog] = useState(false)
+  const [theme, setTheme] = useState(0);
+  const [currType, setCurrType] = useState('front');
+  const [showDialog, setShowDialog] = useState(false);
 
   useEffect(() => {
     aos.init()
+    handleThreejsBg(document.querySelector('.tcanvas'), window)
+
+    return () => {
+      document.querySelector('canvas').remove();
+    }
   }, []);
 
   useEffect(() => {
@@ -112,7 +118,9 @@ export default function Home() {
             </div>
           </footer>
         </div>
-        <div data-aos="fade-left" className={styles.mainImg}><img src="./eu.png" alt="Literally me" /></div>
+        <div data-aos="fade-left" className={`${styles.mainImg} tcanvas`}>
+          <img src="./eu.png" alt="Literally me" />
+        </div>
       </main>
       { showDialog && <Dialog setShow={setShowDialog} show={showDialog} type={currType} /> }
     </>
