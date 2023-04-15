@@ -140,15 +140,8 @@ export function handleThreejsBg (element) {
       this.mesh.rotation.x = _t.MathUtils.degToRad(-40);
       this.mesh.rotation.y = _t.MathUtils.degToRad(-55);
       this.mesh.rotation.z = _t.MathUtils.degToRad(-15);
-
-      this.stats1 = new Stats();
-      this.stats1.showPanel(0); // Panel 0 = fps
-      this.stats1.domElement.style.cssText =
-        "position:absolute;top:0px;left:0px;";
-      element.appendChild(this.stats1.domElement);
     },
     updateScene(interval, elapsed) {
-      this.stats1.update();
       uniforms.u_mouse.value = mouse
     }
   }

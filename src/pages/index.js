@@ -45,8 +45,12 @@ export default function Home() {
   }
 
   const handleMouseMove = ({ pageX: left, pageY }) => {
-    const maxH = window.innerHeight - 50
-    const top = pageY > maxH ? maxH : pageY - 25
+    if (window.orientation > 1) {
+      setCursorStyle({ display: 'hidden' });
+      return;
+    }
+    const maxH = window.innerHeight - 50;
+    const top = pageY > maxH ? maxH : pageY - 25;
     setCursorStyle({ top, left: left - 25 });
   }
 
