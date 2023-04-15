@@ -4,7 +4,7 @@ import Styles from './index.module.scss'
 
 const jetbrains = JetBrains_Mono({ subsets: ['latin'] })
 
-export default function Dialog({ setShow, type }) {
+export default function Dialog({ setShow, type, ...mouseOpts }) {
   const typeRel = {
     front: {
       title: 'Front-end',
@@ -44,7 +44,7 @@ export default function Dialog({ setShow, type }) {
 
           <div className={Styles.tagsContainer}>
           { typeRel[type].expert
-            .map(([item, href], index) => (<a target="_blank" href={href} key={index}>{item}</a>)) }
+            .map(([item, href], index) => (<a {...mouseOpts} target="_blank" href={href} key={index}>{item}</a>)) }
           </div>
         </div>) }
 
@@ -53,7 +53,7 @@ export default function Dialog({ setShow, type }) {
 
           <div className={Styles.tagsContainer}>
           { typeRel[type].learning
-            .map(([item, href], index) => (<a target="_blank" href={href} key={index}>{item}</a>)) }
+            .map(([item, href], index) => (<a {...mouseOpts} target="_blank" href={href} key={index}>{item}</a>)) }
           </div>
         </div>) }
       </main>

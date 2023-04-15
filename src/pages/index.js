@@ -31,19 +31,36 @@ export default function Home() {
       ['--color-1', '#F58484'],
       ['--color-2', '#FFD4D4']
     ]
-  ]
+  ];
 
   const [theme, setTheme] = useState(0);
+  const [cursorStyle, setCursorStyle] = useState({ display: 'hidden' });
   const [currType, setCurrType] = useState('front');
   const [showDialog, setShowDialog] = useState(false);
+  const [mouseHover, setMouseHover] = useState(false);
+
+  const mouseOpts = {
+    onMouseEnter: () => setMouseHover(true),
+    onMouseLeave: () => setMouseHover(false)
+  }
+
+  const handleMouseMove = ({ pageX: left, pageY }) => {
+    const maxH = window.innerHeight - 50
+    const top = pageY > maxH ? maxH : pageY - 25
+    setCursorStyle({ top, left: left - 25 });
+  }
 
   useEffect(() => {
     aos.init()
+
     handleThreejsBg(document.querySelector('.tcanvas'), window)
+
+    window.addEventListener('mousemove', handleMouseMove)
 
     return () => {
       document.querySelector('canvas').remove();
-    }
+      window.removeEventListener('mousemove', handleMouseMove)
+    } 
   }, []);
 
   useEffect(() => {
@@ -97,24 +114,24 @@ export default function Home() {
           <footer>
             <div className={styles.skills}>
               <div>
-                <button onClick={() => handleDialog('front')}>Front-end</button>
-                <button onClick={() => handleDialog('back')}>Back-end</button>
+                <button {...mouseOpts} onClick={() => handleDialog('front')}>Front-end</button>
+                <button {...mouseOpts} onClick={() => handleDialog('back')}>Back-end</button>
               </div>
               <div>
-                <button onClick={() => handleDialog('database')}>Database</button>
-                <button onClick={() => handleDialog('languages')}>Languages</button>
-                <button onClick={() => handleDialog('secret')}>SECRET???</button>
+                <button {...mouseOpts} onClick={() => handleDialog('database')}>Database</button>
+                <button {...mouseOpts} onClick={() => handleDialog('languages')}>Languages</button>
+                <button {...mouseOpts} onClick={() => handleDialog('secret')}>SECRET???</button>
               </div>
             </div>
             <div className={styles.socials}>
               <a target="_blank" href="https://github.com/OPedroRicardo">
-                <button title="GitHub"><img src="./GithubLogo.svg" alt="GitHub" /></button>
+                <button {...mouseOpts} title="GitHub"><img src="./GithubLogo.svg" alt="GitHub" /></button>
               </a>
               <a target="_blank" href="https://www.linkedin.com/in/opedroricardo/">
-                <button title="LinkedIn"><img src="./LinkedinLogo.svg" alt="LinkedIn" /></button>
+                <button {...mouseOpts} title="LinkedIn"><img src="./LinkedinLogo.svg" alt="LinkedIn" /></button>
               </a>
               <a target="_blank" href="./CurriculumPedroRicardo.pdf" title="Curriculum"><img src="./Files.svg" alt="Curriculum" /></a>
-              <button onClick={handleTheme} title="Themes"><img src="./PaintRoller.svg" alt="Themes" /></button>
+              <button {...mouseOpts} onClick={handleTheme} title="Themes"><img src="./PaintRoller.svg" alt="Themes" /></button>
             </div>
           </footer>
         </div>
@@ -122,7 +139,8 @@ export default function Home() {
           <img src="./eu.png" alt="Literally me" />
         </div>
       </main>
-      { showDialog && <Dialog setShow={setShowDialog} show={showDialog} type={currType} /> }
+      <div style={cursorStyle} className={`${styles.customCursor} ${mouseHover && styles.mouseHover}`} />
+      { showDialog && <Dialog setShow={setShowDialog} {...mouseOpts} show={showDialog} type={currType} /> }
     </>
   )
 }

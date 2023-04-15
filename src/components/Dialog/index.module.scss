@@ -23,7 +23,6 @@
   }
 
   .btnRight {
-    cursor: pointer;
     text-align: right;
   }
 
@@ -38,7 +37,6 @@
       border: 2px solid var(--color-1);
       padding: 0.5rem 1rem;
       border-radius: 100px;
-      cursor: pointer;
       transition: all ease-in-out 300ms;
 
       &:hover {
