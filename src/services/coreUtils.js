@@ -96,12 +96,8 @@ export const runApp = (
   app
     .initScene()
     .then(animate)
-    .then(() => {
-      renderer.info.reset();
-      console.log("Renderer info", renderer.info);
-    })
     .catch((error) => {
-      console.log(error);
+      console.error(error);
     });
 };
 

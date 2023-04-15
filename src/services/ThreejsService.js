@@ -106,6 +106,18 @@ export function handleThreejsBg (element) {
 
   let mouse = { x: 0, y: 0 }
 
+  const toEuler = (q) => {
+    const sinr_cosp = 2 * (q[3] * q[0] + q[1] * q[2]);
+    const cosr_cosp = 1 - 2 * (q[0] * q[0] + q[1] * q[1]);
+    const roll = Math.atan2(sinr_cosp, cosr_cosp);
+
+    const siny_cosp = 2 * (q[3] * q[2] + q[0] * q[1]);
+    const cosy_cosp = 1 - 2 * (q[1] * q[1] + q[2] * q[2]);
+    const yaw = Math.atan2(siny_cosp, cosy_cosp);
+
+    return [yaw, roll];
+  }
+
   const handleMouseMove = ({ pageX, pageY }) => {
     mouse = {
       x: pageX / window.innerWidth,
@@ -113,7 +125,18 @@ export function handleThreejsBg (element) {
     }
   }
 
-  window.addEventListener('mousemove', handleMouseMove)
+  const handleSensor = (e) => {
+    const quaternion = e.target.quaternion;
+    const [x, y] = toEuler(quaternion);
+    mouse = { x, y }
+  }
+
+  if (navigator.userAgentData.mobile) {
+    window.addEventListener('reading', handleSensor)
+  } else {
+    window.addEventListener('mousemove', handleMouseMove)
+  }
+
 
   let scene = new _t.Scene();
 

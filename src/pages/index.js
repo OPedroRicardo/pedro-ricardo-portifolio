@@ -45,8 +45,8 @@ export default function Home() {
   }
 
   const handleMouseMove = ({ pageX: left, pageY }) => {
-    if (window.orientation > 1) {
-      setCursorStyle({ display: 'hidden' });
+    if (navigator.userAgentData.mobile) {
+      setCursorStyle({ display: 'none' });
       return;
     }
     const maxH = window.innerHeight - 50;
