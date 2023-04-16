@@ -1,6 +1,4 @@
 import * as _t from 'three'
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import Stats from "three/examples/jsm/libs/stats.module";
 import {
   createCamera,
   createRenderer,
@@ -113,13 +111,20 @@ export function handleThreejsBg (element) {
     }
   }
 
-  const handleSensor = ({ alpha: x, beta: y }) => {
+  const handleSensor = ({ beta, gamma }) => {
+    const x = (beta - 80) / 100
+    const y = (gamma + 90) / 180
+
     mouse = { x, y }
   }
 
-  if (navigator.userAgentData.mobile) {
-    window.addEventListener('deviceorientation', handleSensor)
-  } else {
+  try {
+    if (navigator.userAgentData.mobile) {
+      window.addEventListener('deviceorientation', handleSensor)
+    } else {
+      window.addEventListener('mousemove', handleMouseMove)
+    }
+  } catch (e) {
     window.addEventListener('mousemove', handleMouseMove)
   }
 

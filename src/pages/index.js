@@ -6,7 +6,6 @@ import { Dialog } from '@/components'
 import { handleThreejsBg } from '@/services'
 import aos from 'aos'
 import 'aos/dist/aos.css'
-import consolere from 'console-remote-client'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,18 +56,15 @@ export default function Home() {
   }
 
   useEffect(() => {
+    aos.init()
+
     try {
-      consolere.connect({ channel: 'pedro-ricardo-portfolio' });
       handleThreejsBg(document.querySelector('.tcanvas'), window)
 
       window.addEventListener('mousemove', handleMouseMove)
     } catch (e) {
-      console.re.log(e)
-    } finally { 
-      console.re.log('teste') 
+      console.error(e)
     }
-
-    aos.init()
 
     return () => {
       document.querySelector('canvas').remove();
