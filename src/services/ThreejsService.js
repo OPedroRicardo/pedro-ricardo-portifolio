@@ -118,16 +118,10 @@ export function handleThreejsBg (element) {
   }
 
   if (navigator.userAgentData.mobile) {
-    try {
-      window.addEventListener('deviceorientation', handleSensor)
-    } catch (e) {
-      alert(e)
-      window.addEventListener('mousemove', handleMouseMove)
-    }
+    window.addEventListener('deviceorientation', handleSensor)
   } else {
     window.addEventListener('mousemove', handleMouseMove)
   }
-
 
   let scene = new _t.Scene();
 
