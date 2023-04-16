@@ -34,7 +34,7 @@ export default function Home() {
   ];
 
   const [theme, setTheme] = useState(0);
-  const [cursorStyle, setCursorStyle] = useState({ display: 'hidden' });
+  const [cursorStyle, setCursorStyle] = useState({ display: 'none' });
   const [currType, setCurrType] = useState('front');
   const [showDialog, setShowDialog] = useState(false);
   const [mouseHover, setMouseHover] = useState(false);
@@ -134,7 +134,7 @@ export default function Home() {
               <a target="_blank" href="https://www.linkedin.com/in/opedroricardo/">
                 <button {...mouseOpts} title="LinkedIn"><img src="./LinkedinLogo.svg" alt="LinkedIn" /></button>
               </a>
-              <a target="_blank" href="./CurriculumPedroRicardo.pdf" title="Curriculum"><img src="./Files.svg" alt="Curriculum" /></a>
+              <a {...mouseOpts} target="_blank" className={styles.curriculum} href="./CurriculumPedroRicardo.pdf" title="Curriculum"><img src="./Files.svg" alt="Curriculum" /></a>
               <button {...mouseOpts} onClick={handleTheme} title="Themes"><img src="./PaintRoller.svg" alt="Themes" /></button>
             </div>
           </footer>
