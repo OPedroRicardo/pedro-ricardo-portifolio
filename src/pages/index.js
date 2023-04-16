@@ -45,7 +45,7 @@ export default function Home() {
   }
 
   const handleMouseMove = ({ pageX: left, pageY }) => {
-    if (navigator.userAgentData.mobile) {
+    if (navigator?.userAgentData?.mobile) {
       setCursorStyle({ display: 'none' });
       return;
     }
