@@ -119,12 +119,12 @@ export function handleThreejsBg (element) {
   }
 
   try {
-    if (window.mobileAndTabletCheck) {
+    if (window.isMobile) {
       window.addEventListener('deviceorientation', handleSensor)
     } else {
       window.addEventListener('mousemove', handleMouseMove)
     }
-  } catch (e) {
+  } catch (e) { 
     window.addEventListener('mousemove', handleMouseMove)
   }
 
