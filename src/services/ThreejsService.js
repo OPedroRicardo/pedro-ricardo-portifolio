@@ -119,7 +119,7 @@ export function handleThreejsBg (element) {
   }
 
   try {
-    if (navigator.userAgentData.mobile) {
+    if (window.mobileAndTabletCheck) {
       window.addEventListener('deviceorientation', handleSensor)
     } else {
       window.addEventListener('mousemove', handleMouseMove)
