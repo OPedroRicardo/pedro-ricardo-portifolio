@@ -1,11 +1,11 @@
-import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import { useState, useEffect } from 'react'
 import styles from '@/styles/Home.module.scss'
-import { Dialog } from '@/components'
 import { handleThreejsBg } from '@/services'
-import aos from 'aos'
+import { useState, useEffect } from 'react'
+import { Inter } from 'next/font/google'
+import { Dialog } from '@/components'
+import Head from 'next/head'
 import 'aos/dist/aos.css'
+import aos from 'aos'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -97,7 +97,15 @@ export default function Home() {
   }
 
   const title = "Pedro Ricardo's Portfolio"
-  const description = "I’m an 18-years-old Full Stack Developer that loves to learn and teach"
+
+  const birth = (new Date("06/13/2004")).getTime()  
+  const ageDt = new Date(Date.now() - birth)
+  const year = ageDt.getUTCFullYear()
+  const age = Math.abs(year - 1970)
+
+  console.log(age, year, ageDt, birth)
+
+  const description = `I’m an ${age}-years-old Full Stack Developer that loves to learn and teach`
 
   return (
     <>
@@ -126,7 +134,7 @@ export default function Home() {
           <div>
             <h1>HEY, I AM</h1>
             <h2>PEDRO RICARDO</h2>
-            <p>I’m an 18-years-old <strong>Full Stack</strong> Developer that loves to <strong>learn</strong> and <strong>teach</strong>.</p>
+            <p>I’m an {age}-years-old <strong>Full Stack</strong> Developer that loves to <strong>learn</strong> and <strong>teach</strong>.</p>
           </div>
           <footer>
             <div className={styles.skills}>

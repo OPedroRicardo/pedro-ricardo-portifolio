@@ -6,8 +6,6 @@ import {
   getDefaultUniforms
 } from "./coreUtils";
 
-// 240 141 0
-
 const fragShader = `
 #ifdef GL_ES
 precision mediump float;

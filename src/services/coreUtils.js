@@ -1,6 +1,6 @@
-import * as _t from "three";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer";
+import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass";
+import * as _t from "three";
 
 global._t = _t;
 export const getDefaultUniforms = () => {
