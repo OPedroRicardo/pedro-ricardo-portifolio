@@ -40,7 +40,7 @@ export default function Dialog({ setShow, type, ...mouseOpts }) {
         { typeRel[type].message && <p>{ typeRel[type].message }</p> }
 
         { typeRel[type].expert && (<div>
-          <p>Expert:</p>
+          <p>Experiences:</p>
 
           <div className={Styles.tagsContainer}>
           { typeRel[type].expert
