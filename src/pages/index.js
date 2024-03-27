@@ -103,8 +103,6 @@ export default function Home() {
   const year = ageDt.getUTCFullYear()
   const age = Math.abs(year - 1970)
 
-  console.log(age, year, ageDt, birth)
-
   const description = `I’m an ${age}-years-old Full Stack Developer that loves to learn and teach`
 
   return (
