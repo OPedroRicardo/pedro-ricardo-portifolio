@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedro Ricardo | Full Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glass { backdrop-filter: blur(14px); background: rgba(255,255,255,0.05); }
+    .gradient-text {
+      background: linear-gradient(90deg, #fff, #9CA3AF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .highlight {
+      background: linear-gradient(90deg, rgba(99,102,241,0.20), rgba(168,85,247,0.20));
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    .pill {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #D1D5DB;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+  <!-- BACKGROUND GLOW -->
+  <div class="fixed top-0 left-0 w-full h-full -z-10">
+    <div class="absolute w-[600px] h-[600px] bg-purple-500 opacity-20 blur-3xl rounded-full top-[-100px] left-[-100px]"></div>
+    <div class="absolute w-[500px] h-[500px] bg-blue-500 opacity-20 blur-3xl rounded-full bottom-[-100px] right-[-100px]"></div>
+  </div>
+
+  <!-- HERO -->
+  <section class="mt-24 flex flex-col justify-center px-6 max-w-6xl mx-auto">
+    <div class="glass p-10 rounded-3xl border border-white/10">
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="pill">+4 anos de experiência</span>
+        <span class="pill">Full Stack</span>
+        <span class="pill">IA & Data</span>
+      </div>
+
+      <p class="text-sm text-gray-400 mb-4">Full Stack Developer</p>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight gradient-text">
+        Pedro Ricardo
+      </h1>
+
+      <p class="text-lg text-gray-300 max-w-4xl mb-8 leading-relaxed">
+        Sou um desenvolvedor focado em <span class="highlight">performance</span>,
+        <span class="highlight">arquitetura</span> e <span class="highlight">experiência do usuário</span>.
+        Atuo em projetos reais de grande escala — incluindo soluções para
+        <span class="highlight">empresas como Mercedes-Benz</span>.
+      </p>
+
+      <div class="flex gap-4">
+        <a href="#contato" class="px-6 py-3 rounded-2xl bg-white text-black font-semibold hover:scale-105 transition">
+          Falar comigo
+        </a>
+        <a href="https://www.linkedin.com/in/opedroricardo" target="_blank"
+          class="px-6 py-3 rounded-2xl border border-white/20 hover:bg-white/10 transition">
+          Ver LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="glass p-10 rounded-3xl border border-white/10">
+      <h2 class="text-3xl font-semibold mb-6">Sobre</h2>
+      <p class="text-gray-300 leading-relaxed text-lg">
+        Atualmente atuo como <span class="highlight">Full Stack Developer na YBOH</span>,
+        construindo sistemas com <span class="highlight">alta escalabilidade</span>,
+        <span class="highlight">integrações complexas</span> e pipelines de
+        <span class="highlight">CI/CD</span>.
+        <br/><br/>
+        Trabalho diariamente com <span class="highlight">Node.js, NestJS, Next.js e Vue</span>,
+        além de modelagem de dados com <span class="highlight">Prisma e MySQL</span>.
+        <br/><br/>
+        Também exploro <span class="highlight">Inteligência Artificial</span>, aplicando
+        <span class="highlight">Python e LSTM</span> para resolver problemas reais — sempre
+        buscando unir <span class="highlight">engenharia sólida</span> com
+        <span class="highlight">inovação</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="py-24 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-10">Stack</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">Node.js</div>
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">NestJS</div>
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">Next.js</div>
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">Vue + Quasar</div>
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">MySQL</div>
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">Prisma</div>
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">Python / IA</div>
+      <div class="glass p-6 rounded-2xl text-center hover:scale-105 transition">CI/CD</div>
+    </div>
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+  <section class="py-24 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-10">Experiência</h2>
+
+    <div class="space-y-6">
+      <div class="glass p-6 rounded-2xl border border-white/10">
+        <h3 class="text-xl font-semibold">YBOH</h3>
+        <p class="text-gray-400">Full Stack • 2021 - Atual</p>
+        <p class="text-gray-300 mt-2">
+          Desenvolvimento de <span class="highlight">sistemas críticos</span> com foco em
+          <span class="highlight">performance</span>, <span class="highlight">escala</span> e
+          <span class="highlight">entrega contínua</span>.
+        </p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl border border-white/10">
+        <h3 class="text-xl font-semibold">codeBuddy / SuperGeeks</h3>
+        <p class="text-gray-400">Instrutor • 2019 - 2021</p>
+        <p class="text-gray-300 mt-2">
+          Ensino de <span class="highlight">lógica de programação</span> e formação de novos
+          desenvolvedores — fortalecendo comunicação e liderança técnica.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="glass p-10 rounded-3xl border border-white/10 text-center">
+      <h2 class="text-3xl font-semibold mb-6">Vamos construir algo juntos</h2>
+      <p class="text-gray-300 mb-6 text-lg">
+        Aberto a <span class="highlight">oportunidades</span>,
+        <span class="highlight">freelas</span> e projetos interesantes.
+      </p>
+
+      <div class="space-y-2">
+        <p class="text-lg font-medium">dev.pedroricardo@gmail.com</p>
+        <a href="https://www.linkedin.com/in/opedroricardo" target="_blank" class="text-gray-400 hover:text-white underline">
+          linkedin.com/in/opedroricardo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-10 text-gray-600 text-sm">
+    © 2026 Pedro Ricardo — engineered to stand out 🚀
+  </footer>
+
+</body>
+</html>
